@@ -32,7 +32,7 @@ ark-r1cs-std = { git = "https://github.com/SRI-CSL/r1cs-std", default-features =
 ark-nonnative-field = { git = "https://github.com/SRI-CSL/nonnative", default-features = false, optional = true }
 hashbrown = { version = "0.9", optional = true }
 
-bench-utils = { git = "https://github.com/SRI-CSL/utils", default-features = false  }
+
 
 rand_core = { version = "0.5", default-features = false }
 digest = "0.9"
@@ -64,5 +64,5 @@ debug = true
 default = [ "std", "parallel" ]
 std = [ "ark-ff/std", "ark-ec/std", "ark-nonnative-field/std", "ark-poly/std", "ark-std/std", "ark-relations/std", "ark-serialize/std" ]
 r1cs = [ "ark-relations", "ark-r1cs-std", "ark-nonnative-field", "hashbrown" ]
-print-trace = [ "bench-utils/print-trace" ]
+print-trace = [ "ark-std/print-trace" ]
 parallel = [ "std", "ark-ff/parallel", "ark-ec/parallel", "ark-poly/parallel", "ark-std/parallel", "rayon" ]
